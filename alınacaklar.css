@@ -1,0 +1,107 @@
+body {
+background-image: url("https://www.crushpixel.com/big-static15/preview4/top-view-american-money-background-1931964.jpg") ;
+background-size: cover;
+}
+
+div {
+	background-color: #93AF8B;
+	 height: 50%;
+     width: 50%;
+	 margin: auto;
+    opacity: 0.1;
+	border-style: outset;
+	border-color: white;
+}
+
+div:hover {
+  opacity: 1.0;
+}
+
+
+label {
+	font-family: Lucida Handwriting;
+	font-size: 15px;
+	color: white;
+}
+
+p {
+	font-family: Lucida Handwriting;
+	font-size: 20px;
+	color: white;
+}
+
+h1 {
+	font-family: Lucida Handwriting;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+}
+
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	
+	.container input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+
+.container:hover input ~ .checkmark {
+	background-color: #B2D4A2;
+}
+
+
+.container input:checked ~ .checkmark {
+	background-color: #3B4A2E;
+}
+
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+
+.container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 30px 30px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
